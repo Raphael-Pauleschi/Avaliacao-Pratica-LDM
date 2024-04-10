@@ -1,0 +1,75 @@
+<div class="container">
+        <h1>Tela de Consulta</h1>
+        <div class="table-responsive container">
+        <table>
+          <thead>
+		  <tr >
+            <th scope="row">
+              Nome 
+            </th>
+            <th scope="row" >
+              Endereco
+            </th>
+            <th scope="row" >
+              Bairro
+            </th>
+            <th scope="row">
+              CEP
+            </th>
+           <th scope="row">
+              Cidade
+            </th>
+            <th scope="row">
+              Estado
+            </th>
+            <th scope="row" >
+              Telefone
+            </th>
+            <th scope="row">
+              Ações
+            </th>
+          </tr>
+		  </thead>
+		  <tbody>
+          {{#each post}}
+            {{#dataValues}}
+              <tr>
+			  <td scope="row">
+                  {{nome}}
+                </td>
+               <td scope="row">
+                  {{endereco}}
+                </td>
+               <td scope="row">
+                  {{bairro}}
+                </td>
+                <td scope="row">
+                  {{cep}}
+                </td>
+                <td scope="row">
+                  {{cidade}}
+                </td>
+                 <td scope="row">
+                  {{estado}}
+                </td>
+                <td scope="row">
+                  {{telefone}}
+                </td>
+                <td scope="row">
+                  <button type="button" class="btn btn-primary"><a
+                      href="/editar/{{id}}"
+                      style="color:inherit"
+                    >Editar</a></button>
+                  <button type="button" class="btn btn-danger"><a
+                      href="/excluir/{{id}}"
+                      style="color:inherit"
+                    >Excluir</a></button>
+                </td>
+              </tr>
+            {{/dataValues}}
+          {{/each}}
+        </tbody>
+        </table>
+        </div>
+
+</div>
